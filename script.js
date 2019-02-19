@@ -47,10 +47,11 @@ function main() {
 		    	type: 'GET',
 	
 		   		success: function(response) {
-		       		var ratingAverage = '<p> id: ' + response.id + '</p>';
-		       		ratingAverage += '<p>name: ' + response.name + '</p>';
-		       		ratingAverage += '<p>average: ' + response.average + '</p>';
-		       		ratingAverage += '<p>ratings Count: ' + response.ratingsCount + '</p>';
+              var item = response.item;
+		       		var ratingAverage = '<p> id: ' + item.id + '</p>';
+		       		ratingAverage += '<p>name: ' + item.name + '</p>';
+		       		ratingAverage += '<p>average: ' + item.average + '</p>';
+		       		ratingAverage += '<p>ratings Count: ' + item.ratingsCount + '</p>';
 
 		       		$('#ratings-widget').html(ratingAverage);
 		       
